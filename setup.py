@@ -18,8 +18,15 @@ setup(
             'distribute',
             ],
         install_requires=[              # Dependencies for the package.
+            'hachoir-metadata',
+            'hachoir-parser',
+            'hachoir-core',
+            'SQLAlchemy',
+            'pHash',
+            'SimpleCV',
             ],
         scripts=[],                     # List of python script files.
+        entry_points = {'console_scripts': ['file-tracker = file_tracker:main',]},
         #data_files=[('/etc/init.d', ['init-script'])]
                                         # List of files, which have to
                                         # be installed into specific 
